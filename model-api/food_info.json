@@ -1,0 +1,158 @@
+{
+  "ayam_goreng": {
+    "nama": "Ayam Goreng Padang",
+    "deskripsi": "Ayam yang dimasak dalam bumbu kuning khas Minang, lalu digoreng hingga renyah. Biasanya disajikan dengan serundeng.",
+    "sejarah": "Ayam goreng Padang merupakan adaptasi masakan tradisional Minangkabau dengan bumbu lengkap tanpa tepung.",
+    "bahan": [
+      "Ayam kampung",
+      "Bawang merah",
+      "Bawang putih",
+      "Lengkuas",
+      "Kunyit",
+      "Serai",
+      "Daun salam",
+      "Garam",
+      "Minyak goreng"
+    ],
+    "sumber": "https://id.wikipedia.org/wiki/Ayam_goreng_(Nusantara)"
+  },
+  "ayam_pop": {
+    "nama": "Ayam Pop",
+    "deskripsi": "Ayam kampung direbus dalam air kelapa dan bawang putih, lalu digoreng sebentar, disajikan dengan sambal merah.",
+    "sejarah": "Diciptakan di Bukittinggi tahun 1950-an oleh Restoran Family Benteng Indah. Warna pucatnya jadi ciri khas unik.",
+    "bahan": [
+      "Ayam kampung",
+      "Air kelapa",
+      "Bawang putih",
+      "Garam",
+      "Minyak goreng",
+      "Sambal merah"
+    ],
+    "sumber": "https://travel.kompas.com/read/2017/07/31/190500027/ini-asal-usul-ayam-pop-khas-minang"
+  },
+  "daging_rendang": {
+    "nama": "Rendang",
+    "deskripsi": "Rendang adalah hidangan daging sapi yang dimasak dengan santan dan rempah khas Minang hingga kering, berwarna gelap dan sangat kaya rasa.",
+    "sejarah": "Rendang berasal dari tradisi marandang, teknik memasak dalam waktu lama hingga kering. Sudah dikenal sejak abad ke-16 sebagai bekal merantau masyarakat Minang.",
+    "bahan": [
+      "Daging sapi",
+      "Santan kelapa",
+      "Cabai merah",
+      "Bawang merah",
+      "Bawang putih",
+      "Lengkuas",
+      "Kunyit",
+      "Serai",
+      "Daun kunyit",
+      "Daun jeruk",
+      "Asam kandis",
+      "Garam"
+    ],
+    "sumber": "https://www.kompas.com/food/read/2022/01/06/113400575/sejarah-rendang-berkaitan-dengan-tradisi-merantau-orang-minangkabau"
+  },
+  "dendeng_batokok": {
+    "nama": "Dendeng Batokok",
+    "deskripsi": "Dendeng Batokok adalah daging sapi tipis yang dipukul hingga pipih, digoreng, dan disajikan dengan sambal merah pedas.",
+    "sejarah": "Nama 'batokok' berasal dari bahasa Minang yang berarti 'dipukul'. Muncul dari daerah Bukittinggi sebagai upaya melunakkan dan membumbui daging secara merata.",
+    "bahan": [
+      "Daging sapi",
+      "Cabai merah",
+      "Bawang merah",
+      "Bawang putih",
+      "Jeruk nipis",
+      "Garam",
+      "Minyak goreng"
+    ],
+    "sumber": "https://www.kompasiana.com/agung62340/60a72784d541df6c09768113/asal-usul-makanan-dendeng-batokok"
+  },
+  "gulai_ikan": {
+    "nama": "Gulai Ikan",
+    "deskripsi": "Ikan dimasak dalam kuah santan yang kental dan kaya rempah, salah satu variasi gulai khas Minangkabau.",
+    "sejarah": "Gulai ikan adalah adaptasi lokal dari kari India yang kemudian menjadi ciri khas masakan Sumatera Barat.",
+    "bahan": [
+      "Ikan tenggiri",
+      "Santan",
+      "Cabai merah",
+      "Bawang merah",
+      "Bawang putih",
+      "Kunyit",
+      "Lengkuas",
+      "Serai",
+      "Daun jeruk",
+      "Asam kandis",
+      "Garam"
+    ],
+    "sumber": "https://en.wikipedia.org/wiki/Gulai"
+  },
+  "gulai_tambusu": {
+    "nama": "Gulai Tambusu",
+    "deskripsi": "Usus sapi yang diisi dengan campuran telur dan tahu, dimasak dalam kuah gulai santan berbumbu khas.",
+    "sejarah": "Nama 'tambusu' berasal dari kata Minang 'tambu' yang berarti 'diisi'. Hidangan ini mencerminkan inovasi masyarakat Minang dalam memanfaatkan bahan.",
+    "bahan": [
+      "Usus sapi",
+      "Telur",
+      "Tahu",
+      "Santan",
+      "Cabai merah",
+      "Bawang merah",
+      "Bawang putih",
+      "Kunyit",
+      "Lengkuas",
+      "Serai",
+      "Daun jeruk",
+      "Asam kandis",
+      "Garam"
+    ],
+    "sumber": "https://rajominang.id/blog/menguak-sejarah-dan-filosofi-di-balik-tambusu-masakan-khas-padang"
+  },
+  "gulai_tunjang": {
+    "nama": "Gulai Tunjang",
+    "deskripsi": "Kaki sapi (tunjang) dimasak dalam kuah santan kental dengan bumbu rempah, menghasilkan rasa gurih dan tekstur kenyal.",
+    "sejarah": "Gulai tunjang berasal dari tradisi Minang yang memanfaatkan seluruh bagian hewan ternak, termasuk kaki sapi.",
+    "bahan": [
+      "Kaki sapi",
+      "Santan",
+      "Cabai merah",
+      "Bawang merah",
+      "Bawang putih",
+      "Kunyit",
+      "Lengkuas",
+      "Serai",
+      "Daun jeruk",
+      "Asam kandis",
+      "Garam"
+    ],
+    "sumber": "https://www.liputan6.com/feeds/read/5783804/gulai-tunjang-adalah-hidangan-lezat-khas-sumatera-barat"
+  },
+  "telur_balado": {
+    "nama": "Telur Balado",
+    "deskripsi": "Telur rebus yang digoreng dan dilumuri sambal balado merah khas Minang yang gurih dan pedas.",
+    "sejarah": "Teknik balado berasal dari Minangkabau, istilah 'lado' berarti cabai, menunjukkan teknik menumis cabai sebagai bumbu utama.",
+    "bahan": [
+      "Telur ayam",
+      "Cabai merah",
+      "Bawang merah",
+      "Bawang putih",
+      "Tomat",
+      "Garam",
+      "Minyak goreng"
+    ],
+    "sumber": "https://www.tagar.id/mengenal-asal-usul-balado-kuliner-khas-minang"
+  },
+  "telur_dadar": {
+    "nama": "Telur Dadar Padang",
+    "deskripsi": "Telur dadar tebal khas Padang, dicampur kelapa parut dan bumbu rempah, digoreng hingga kering dan garing.",
+    "sejarah": "Hidangan ini berasal dari Sumatera Barat sebagai bagian penting dari nasi Padang, mencerminkan cara unik masyarakat Minang memperkaya rasa.",
+    "bahan": [
+      "Telur",
+      "Kelapa parut",
+      "Daun bawang",
+      "Cabai merah",
+      "Bawang merah",
+      "Bawang putih",
+      "Garam",
+      "Minyak goreng"
+    ],
+    "sumber": "https://www.liputan6.com/feeds/read/5857141/resep-telur-dadar-padang-tebal-rahasia-kelezatan-kuliner-khas-sumatera-barat"
+  }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hasil Klasifikasi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      background-image: url('/static/images/bg_predict.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800">
+  <div class="min-h-screen flex items-center justify-center px-4 py-10">
+    <div class="max-w-6xl w-full p-8 bg-white/90 rounded-xl shadow-xl relative">
+      <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+
+        <!-- Gambar Hasil Upload -->
+        <div class="flex-shrink-0 w-full lg:w-1/2">
+          <img src="{{ url_for('static', filename='uploaded/' + filename) }}" alt="Hasil Upload" class="rounded-xl border border-gray-300 w-full" />
+        </div>
+
+        <!-- Informasi Klasifikasi -->
+        <div class="w-full lg:w-1/2">
+          <h2 class="text-3xl font-bold text-black-800 mb-2">{{ data['nama'] }}</h2>
+          <!--
+          <p class="text-sm text-gray-500 mb-4">Label: <strong>{{ label }}</strong> — Confidence: {{ '%.2f' | format(confidence * 100) }}%</p>
+        -->
+          {% if data['nama'] == "Gambar Tidak Dikenali" %}
+            <p class="text-red-600 text-lg mb-4">Model tidak yakin bahwa gambar ini merupakan salah satu dari makanan khas Padang.</p>
+            <p class="mb-6">Silakan unggah ulang gambar yang lebih sesuai, seperti <em>rendang</em>, <em>ayam pop</em>, atau menu khas Padang lainnya.</p>
+          {% else %}
+            <h3 class="text-lg font-semibold mb-1">Deskripsi:</h3>
+            <p class="mb-4">{{ data['deskripsi'] }}</p>
+
+            <h3 class="text-lg font-semibold mb-1">Sejarah:</h3>
+            <p class="mb-4">{{ data['sejarah'] }}</p>
+
+            <h3 class="text-lg font-semibold mb-1">Bahan-Bahan:</h3>
+            <ul class="list-disc list-inside mb-4">
+              {% for item in data['bahan'] %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+
+            <p class="text-sm text-gray-600">
+              Sumber:
+              <a href="{{ data['sumber'] }}" class="text-blue-600 underline break-words" target="_blank">{{ data['sumber'] }}</a>
+            </p>
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Tombol Kembali -->
+      <div class="absolute bottom-4 left-4">
+        <a href="/#klasifikasi" class="inline-flex items-center gap-2 bg-white text-black border border-black px-5 py-2 rounded hover:bg-gray-100 transition">
+          <i class="fas fa-arrow-left"></i>
+          Kembali ke Klasifikasi
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

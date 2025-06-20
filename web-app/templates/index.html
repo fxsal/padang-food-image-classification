@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistem Pengenalan Makanan Padang</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+  <script>
+    function scrollToSection(id, event) {
+      if (event) event.preventDefault();
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</head>
+<body class="font-sans text-black-800">
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full bg-white shadow z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-xl font-bold"></h1>
+      <ul class="hidden md:flex gap-6 font-medium">
+        <li><a href="#" onclick="scrollToSection('beranda', event)">Beranda</a></li>
+        <li><a href="#" onclick="scrollToSection('tentang', event)">Tentang</a></li>
+        <li><a href="#" onclick="scrollToSection('menu', event)">Menu</a></li>
+        <li><a href="#" onclick="scrollToSection('klasifikasi', event)">Klasifikasi</a></li>
+        <li><a href="#" onclick="scrollToSection('kontak', event)">Kontak</a></li>
+      </ul>
+      <button class="md:hidden text-xl" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <ul id="mobile-menu" class="md:hidden hidden flex-col px-4 pb-4 font-medium">
+      <li><a href="#" onclick="scrollToSection('beranda', event)">Beranda</a></li>
+      <li><a href="#" onclick="scrollToSection('tentang', event)">Tentang</a></li>
+      <li><a href="#" onclick="scrollToSection('menu', event)">Menu</a></li>
+      <li><a href="#" onclick="scrollToSection('klasifikasi', event)">Klasifikasi</a></li>
+      <li><a href="#" onclick="scrollToSection('kontak', event)">Kontak</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- Beranda -->
+  <section id="beranda" class="relative h-screen flex items-center bg-cover bg-center text-white" style="background-image: url('static/images/bg_beranda.jpg');">
+    <div class="absolute inset-0 bg-black opacity-60"></div>
+    <div class="relative z-10 max-w-4xl pl-16">
+      <h2 class="text-5xl font-bold leading-tight mb-4">Dari Gambar Menjadi Nama<br>Telusuri Kuliner Padang</h2>
+      <p class="text-lg mb-6 max-w-xl">Cukup upload satu foto menu makanan khas Padang, sistem cerdas kami akan menebak namanya dan mengenalkan kisah di balik setiap sajian legendaris Minang.</p>
+      <button onclick="scrollToSection('klasifikasi')" class="bg-white text-black px-6 py-3 rounded font-semibold shadow">Mulai Klasifikasi</button>
+    </div>
+  </section>
+
+<!-- Tentang -->
+  <section id="tentang" class="py-20 bg-gray-100 px-6">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+    <!-- Kolom Teks -->
+    <div class="flex-1 pr-4">
+      <h1 class="text-4xl font-bold mb-6">Mengenal Lebih Dekat</h1>
+      <p class="mb-4 text-justify text-left">Website ini merupakan platform cerdas yang dirancang untuk mengenali dan memperkenalkan berbagai jenis makanan khas Padang yaitu: ayam goreng, ayam pop, daging rendang, dendeng batokok, gulai ikan, gulai tambusu, gulai tunjang, telur balado, dan telur dadar. Melalui teknologi kecerdasan buatan, cukup dengan mengunggah satu gambar, sistem kami akan mengidentifikasi nama makanan dan menampilkan informasi deskriptif yang memperkaya pemahaman pengguna tentang kuliner tersebut.</p>
+      <p class="mb-4 text-justify text-left">Proyek ini menggabungkan kekuatan Convolutional Neural Network (CNN) dengan semangat pelestarian budaya Nusantara, khususnya warisan kuliner Minangkabau. Setiap prediksi bukan sekadar nama, tetapi juga jembatan untuk memahami kekayaan rasa, sejarah, dan keunikan setiap sajian khas Padang.</p>
+      <p class="mb-4 text-justify text-left">Dengan antarmuka yang intuitif, responsif, dan modern, kami menghadirkan pengalaman interaktif yang mudah digunakan oleh siapa pun. Baik untuk keperluan edukasi, eksplorasi budaya, maupun sekadar mengenali masakan yang tertangkap kamera — website ini hadir untuk menjawab kebutuhan zaman secara cerdas dan elegan.</p>
+      <p class="font-semibold mb-6">Ditenagai oleh AI, didedikasikan untuk rasa.</p>
+      <button onclick="scrollToSection('menu')" class="bg-white text-black border border-black shadow px-6 py-2 rounded">Jelajahi Menu</button>
+    </div>
+    <!-- Kolom Gambar -->
+    <div class="flex-shrink-0 grid grid-cols-2 gap-5 max-w-xl">
+      <img src="static/images/rumah-gadang.jpg" alt="Rumah Gadang" class="rounded shadow object-cover">
+      <img src="static/images/rendang.jpg" alt="Rendang" class="rounded shadow object-cover">
+    </div>
+  </div>
+  </section>
+
+
+ <!-- Menu -->
+  <section id="menu" class="py-20 px-4 bg-gradient-to-r from-gray-100 to-gray-200">
+    <div class="max-w-7xl mx-auto">
+      <h4 class="text-md font-semibold text-left mb-2">Jenis Makanan yang Didukung</h4>
+      <h2 class="text-4xl font-bold text-left mb-8">Mengenal Masakan dari Citra</h2>
+
+      <div class="flex overflow-x-auto gap-6 pb-4">
+        <!-- Card Template -->
+        <div class="min-w-[280px] bg-white rounded-xl shadow p-4">
+          <img src="static/images/ayam_pop.jpg" class="w-full h-48 object-cover rounded-md mb-3">
+          <h4 class="font-semibold text-lg">Ayam Pop</h4>
+          <p class="text-sm text-gray-600">Ayam kampung yang direbus dalam bumbu putih lalu digoreng tanpa kulit, disajikan dengan sambal khas Padang.</p>
+        </div>
+
+        <div class="min-w-[280px] bg-white rounded-xl shadow p-4">
+          <img src="static/images/ayam_goreng.jpg" class="w-full h-48 object-cover rounded-md mb-3">
+          <h4 class="font-semibold text-lg">Ayam Goreng</h4>
+          <p class="text-sm text-gray-600">Ayam berbumbu kuning khas Minang, digoreng hingga renyah dan garing di luar, lembut di dalam.</p>
+        </div>
+
+        <div class="min-w-[280px] bg-white rounded-xl shadow p-4">
+          <img src="static/images/daging_rendang.jpg" class="w-full h-48 object-cover rounded-md mb-3">
+          <h4 class="font-semibold text-lg">Rendang</h4>
+          <p class="text-sm text-gray-600">Daging sapi dimasak dalam bumbu rempah khas Minang hingga kering dan pekat.</p>
+        </div>
+
+        <div class="min-w-[280px] bg-white rounded-xl shadow p-4">
+          <img src="static/images/dendeng_batokok.jpg" class="w-full h-48 object-cover rounded-md mb-3">
+          <h4 class="font-semibold text-lg">Dendeng Batokok</h4>
+          <p class="text-sm text-gray-600">Daging sapi digepuk hingga pipih dan disiram sambal lado merah pedas khas Padang.</p>
+        </div>
+
+        <div class="min-w-[280px] bg-white rounded-xl shadow p-4">
+          <img src="static/images/gulai_ikan.jpg" class="w-full h-48 object-cover rounded-md mb-3">
+          <h4 class="font-semibold text-lg">Gulai Ikan</h4>
+          <p class="text-sm text-gray-600">Ikan dimasak dengan santan dan bumbu khas Minang yang kaya rempah, bercita rasa gurih dan pedas ringan.</p>
+        </div>
+
+        <div class="min-w-[280px] bg-white rounded-xl shadow p-4">
+          <img src="static/images/gulai_tambusu1.jpg" class="w-full h-48 object-cover rounded-md mb-3">
+          <h4 class="font-semibold text-lg">Gulai Tambusu</h4>
+          <p class="text-sm text-gray-600">Usus sapi diisi dengan campuran telur dan tahu, lalu dimasak dalam gulai santan yang gurih.</p>
+        </div>
+
+        <div class="min-w-[280px] bg-white rounded-xl shadow p-4">
+          <img src="static/images/gulai_tunjang.jpg" class="w-full h-48 object-cover rounded-md mb-3">
+          <h4 class="font-semibold text-lg">Gulai Tunjang</h4>
+          <p class="text-sm text-gray-600">Kaki sapi dimasak dalam kuah gulai santan kental berbumbu, empuk dan beraroma kuat.</p>
+        </div>
+
+        <div class="min-w-[280px] bg-white rounded-xl shadow p-4">
+          <img src="static/images/telur_balado.jpg" class="w-full h-48 object-cover rounded-md mb-3">
+          <h4 class="font-semibold text-lg">Telur Balado</h4>
+          <p class="text-sm text-gray-600">Telur rebus digoreng dan disajikan dengan sambal balado merah yang gurih pedas.</p>
+        </div>
+
+        <div class="min-w-[280px] bg-white rounded-xl shadow p-4">
+          <img src="static/images/telur_dadar.jpg" class="w-full h-48 object-cover rounded-md mb-3">
+          <h4 class="font-semibold text-lg">Telur Dadar</h4>
+          <p class="text-sm text-gray-600">Telur dadar tebal khas Padang, dicampur dengan irisan daun bawang, kelapa, dan bumbu rempah.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Klasifikasi -->
+  <section id="klasifikasi" class="relative h-screen flex items-center justify-center bg-cover bg-center text-white" style="background-image: url('static/images/rumahgadangart.jpg');">
+  <div class="absolute inset-0 bg-black opacity-60"></div>
+  <div class="relative z-10 text-center px-6 max-w-2xl">
+    <h2 class="text-3xl font-bold mb-2">Klasifikasi Makanan Khas Padang</h2>
+    <h3 class="text-xl font-semibold mb-4">Kenali hidangan hanya dari satu gambar.</h3>
+    <p class="mb-8 text-sm leading-relaxed">Unggah foto makananmu dan biarkan sistem kami menebak nama hidangan Padang yang kamu nikmati — lengkap dengan deskripsi dan cerita di baliknya.</p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-2">
+      <form action="/hasil" method="POST" enctype="multipart/form-data" class="flex flex-col items-center gap-4">
+      <input type="file" name="image" accept="image/*" class="px-4 py-2 rounded w-72 text-sm bg-white text-black">
+      <button type="submit" class="px-6 py-2 bg-gray-700 hover:bg-gray-800 rounded text-white text-sm font-semibold shadow">Prediksi</button>
+    </form>
+    </div>
+  </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="kontak" class="bg-[#2a2a2a] text-white py-10 px-6">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-lg font-semibold text-center mb-2">Sistem Pengenalan Makanan Khas Padang</h2>
+      <p class="text-sm mb-12 max-w-4xl mx-auto text-center text-gray-300">
+        Berbasis Citra Menggunakan Convolutional Neural Network (CNN). Sistem ini dirancang untuk memperkenalkan ragam kuliner Padang secara visual dan informatif.
+      </p>
+
+      <div class="flex flex-col lg:flex-row justify-between items-center mb-8 gap-6">
+        <div class="flex flex-wrap items-center gap-10 justify-center lg:justify-start">
+          <a href="https://www.google.com/maps/place/Depok,+Jawa+Barat" target="_blank" class="flex items-center gap-3">
+            <div class="bg-white text-black rounded-full w-10 h-10 flex items-center justify-center">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <span class="text-sm">Depok, Jawa Barat</span>
+          </a>
+          <a href="https://wa.me/6283879400264" target="_blank" class="flex items-center gap-3">
+            <div class="bg-white text-black rounded-full w-10 h-10 flex items-center justify-center">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <span class="text-sm">+62 838 7940 0264</span>
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mochfaisalsyahwaludin@gmail.com" target="_blank" class="flex items-center gap-3">
+            <div class="bg-white text-black rounded-full w-10 h-10 flex items-center justify-center">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <span class="text-sm">mochfaisalsyahwaludin@gmail.com</span>
+          </a>
+        </div>
+
+        <div class="flex gap-4">
+          <a href="https://www.linkedin.com/in/moch-faisal-syahwaludin-846779203/" target="_blank" class="bg-white text-black rounded-full w-10 h-10 flex items-center justify-center hover:scale-105 transition">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/fxsal" target="_blank" class="bg-white text-black rounded-full w-10 h-10 flex items-center justify-center hover:scale-105 transition">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+
+      <hr class="border-gray-600 mb-4">
+      <p class="text-sm text-gray-400 font-semibold text-left">Copyright © 2025 Moch. Faisal Syahwaludin — All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
