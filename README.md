@@ -44,4 +44,3 @@ The system is divided into two services:
 - Upload → Cloud Run (Frontend) → Forward Image to Cloud Run (Backend) → Prediction → Return JSON → Render Result
 
 ---
-
